@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item' : true,
+                 'list-group-item-success': countSuccess(),
+                 'list-group-item-danger': countDanger()
+                }">
+  <h4>{{monPost.title}}
+  </h4>
+  <div class="text-right">
+    Mis en ligne le : {{monPost.date| date:'short'}}
+  </div>
+  <p>{{monPost.content}}</p>
+  <div class="bouton">
+    <button class="btn btn-success mr-3" (click)="countLike()">
+      <i class="fas fa-thumbs-up"></i> {{like}}
+    </button>
+    <button class="btn btn-danger " (click)="countDislike()">
+      <i class="fas fa-thumbs-down"></i> {{disLike}}
+    </button>
+  </div>
+</li>
