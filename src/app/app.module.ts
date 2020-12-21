@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { postService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PostListComponent } from './post-list/post-list.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [postService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
